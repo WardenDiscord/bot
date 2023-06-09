@@ -1,2 +1,2 @@
-# bot
+# Warden
 Content moderation bot for Discord
