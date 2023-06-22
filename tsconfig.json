@@ -2,13 +2,6 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "paths": {
-      "@app/*": ["src/*"]
-    },
-    "include": [
-      "src",
-      "tests"
-    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
