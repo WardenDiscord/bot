@@ -26,6 +26,15 @@ export const ITALICS_REGEX = /\*(.+)\*/;
 export const BOLD_ITALICS_REGEX = /\*{3}(.+)\*{3}/;
 
 /**
+ * Matches underlined text
+ * 
+ * Groups:
+ * - 0: Full match
+ * - 1: The text that is underlined
+ */
+export const UNDERLINE_REGEX = /__(.+)__/;
+
+/**
  * Matches struckthrough text
  * 
  * Groups:
@@ -33,6 +42,15 @@ export const BOLD_ITALICS_REGEX = /\*{3}(.+)\*{3}/;
  * - 1: The text that is struckthrough
  */
 export const STRIKETHROUGH_REGEX = /~~(.+)~~/;
+
+/**
+ * Matches bullet lists
+ * 
+ * Groups:
+ * - 0: Full match
+ * - 1: The text that is bulleted
+ */
+export const BULLET_LIST_REGEX = /^\s*(?:[\*-]\s)(.+)/;
 
 /**
  * Matches headers
