@@ -100,7 +100,6 @@ export const ALL_CUSTOM_EMOJI_REGEX = /<a?:([\S]+):(\d+)>/;
  */
 export const TIMESTAMP_REGEX = /<t:(\d+)(?::([tTdDfFR]))?>/;
 
-// Discord links
 /**
  * Matches native Discord Guild (aka "Server") invites.
  * 
