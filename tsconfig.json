@@ -1,17 +1,14 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "paths": {
-      "@app/*": ["src/*"]
-    },
-    "include": [
-      "src",
-      "tests"
-    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "removeComments": true
   }
 }
