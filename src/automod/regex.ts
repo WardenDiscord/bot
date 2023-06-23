@@ -5,7 +5,7 @@
  * - 0: Full match
  * - 1: The text that is in bold
  */
-export const BOLD_REGEX = /\*\*(.+)\*\*/g;
+export const BOLD_REGEX = /\*\*(.+)\*\*/;
 
 /**
  * Matches italic text
@@ -14,7 +14,7 @@ export const BOLD_REGEX = /\*\*(.+)\*\*/g;
  * - 0: Full match
  * - 1: The text that is in italics
  */
-export const ITALICS_REGEX = /\*(.+)\*/g;
+export const ITALICS_REGEX = /\*(.+)\*/;
 
 /**
  * Matches struckthrough text
@@ -23,7 +23,7 @@ export const ITALICS_REGEX = /\*(.+)\*/g;
  * - 0: Full match
  * - 1: The text that is struckthrough
  */
-export const STRIKETHROUGH_REGEX = /~~(.+)~~/g;
+export const STRIKETHROUGH_REGEX = /~~(.+)~~/;
 
 /**
  * Matches headers
@@ -32,7 +32,7 @@ export const STRIKETHROUGH_REGEX = /~~(.+)~~/g;
  * - 0: Full match
  * - 1: The text serving as the header
  */
-export const HEADER_REGEX = /#{1,3}\s+(.+)/g;
+export const HEADER_REGEX = /#{1,3}\s+(.+)/;
 
 /**
  * Matches masked links
@@ -42,7 +42,7 @@ export const HEADER_REGEX = /#{1,3}\s+(.+)/g;
  * - 1: The text serving as the masked link's title
  * - 2: The url the masked link points too
  */
-export const MASKED_LINKS_REGEX = /\[([^\[\]]+)\]\(([^\(\)]+)\)/g;
+export const MASKED_LINKS_REGEX = /\[([^\[\]]+)\]\(([^\(\)]+)\)/;
 
 /**
  * Matches slash command mentions
@@ -53,7 +53,7 @@ export const MASKED_LINKS_REGEX = /\[([^\[\]]+)\]\(([^\(\)]+)\)/g;
  * - 2: The slash command's snowflake ID
  */
 // regex ref: https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-naming
-export const SLASH_COMMAND_MENTION_REGEX = /<\/((?:[-_\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}]{1,32}\s?){1,3}):(\d+)>/gu;
+export const SLASH_COMMAND_MENTION_REGEX = /<\/((?:[-_\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}]{1,32}\s?){1,3}):(\d+)>/u;
 
 // We intentionally do not provide a regex for unicode
 // emojis cause it ends up going down a huge rabit hole
@@ -68,7 +68,7 @@ export const SLASH_COMMAND_MENTION_REGEX = /<\/((?:[-_\p{L}\p{N}\p{sc=Deva}\p{sc
  * - 1: The emoji's name
  * - 2: The emoji's snowflake ID
  */
-export const STATIC_CUSTOM_EMOJI_REGEX = /<:([\S]+):(\d+)>/g;
+export const STATIC_CUSTOM_EMOJI_REGEX = /<:([\S]+):(\d+)>/;
 
 /**
  * Matches animated custom emojis
@@ -78,7 +78,7 @@ export const STATIC_CUSTOM_EMOJI_REGEX = /<:([\S]+):(\d+)>/g;
  * - 1: The emoji's name
  * - 2: The emoji's snowflake ID
  */
-export const ANIMATED_CUSTOM_EMOJI_REGEX = /<a:([\S]+):(\d+)>/g;
+export const ANIMATED_CUSTOM_EMOJI_REGEX = /<a:([\S]+):(\d+)>/;
 
 /**
  * Matches all custom emojis
@@ -88,7 +88,7 @@ export const ANIMATED_CUSTOM_EMOJI_REGEX = /<a:([\S]+):(\d+)>/g;
  * - 1: The emoji's name
  * - 2: The emoji's snowflake ID
  */
-export const ALL_CUSTOM_EMOJI_REGEX = /<a?:([\S]+):(\d+)>/g;
+export const ALL_CUSTOM_EMOJI_REGEX = /<a?:([\S]+):(\d+)>/;
 
 /**
  * Matches timestamp mentions
@@ -98,7 +98,7 @@ export const ALL_CUSTOM_EMOJI_REGEX = /<a?:([\S]+):(\d+)>/g;
  * - 1: Timestamp's unix timestamp value
  * - 2: The letter corresponding to the formatting option to use
  */
-export const TIMESTAMP_REGEX = /<t:(\d+)(?::([tTdDfFR]))?>/g;
+export const TIMESTAMP_REGEX = /<t:(\d+)(?::([tTdDfFR]))?>/;
 
 // Discord links
 /**
@@ -110,4 +110,4 @@ export const TIMESTAMP_REGEX = /<t:(\d+)(?::([tTdDfFR]))?>/g;
  * - 0: Full match
  * - 1: The invite code
  */
-export const INVITE_REGEX = /discord\.(?:(?:com\/invite)|gg)\/([\w\d]+)/gi;
+export const INVITE_REGEX = /discord\.(?:(?:com\/invite)|gg)\/([\w\d]+)/i;
