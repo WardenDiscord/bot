@@ -17,6 +17,15 @@ export const BOLD_REGEX = /\*\*(.+)\*\*/;
 export const ITALICS_REGEX = /\*(.+)\*/;
 
 /**
+ * Matches bold italic text
+ * 
+ * Groups:
+ * - 0: Full match
+ * - 1: The text that is in bold italics
+ */
+export const BOLD_ITALICS_REGEX = /\*{3}(.+)\*{3}/;
+
+/**
  * Matches struckthrough text
  * 
  * Groups:
