@@ -119,3 +119,14 @@ export const TIMESTAMP_REGEX = /<t:(\d+)(?::([tTdDfFR]))?>/;
  * - 1: The invite code
  */
 export const INVITE_REGEX = /discord\.(?:(?:com\/invite)|gg)\/([\w\d]+)/i;
+
+/**
+ * Matches message urls
+ * 
+ * Groups:
+ * - 0: Full match
+ * - 1: Guild/"Server" ID
+ * - 2: Channel ID
+ * - 3: Message ID
+ */
+export const MESSAGE_REGEX = /discord\.com\/channels\/(\d+)\/(\d+)\/(\d+)/;
